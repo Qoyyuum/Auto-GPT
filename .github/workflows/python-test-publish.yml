@@ -37,4 +37,4 @@ jobs:
     - name: Publish package to TestPyPi
       run: |
         python -m twine check dist/*
-        python -m twine upload -u __token__ -p ${{ secrets.TEST_PYPI_API_TOKEN }} --skip-existing --non-interactive dist/*
+        python -m twine upload -u __token__ -p ${{ secrets.TEST_PYPI_API_TOKEN }} --repository testpypi --skip-existing --non-interactive dist/*
